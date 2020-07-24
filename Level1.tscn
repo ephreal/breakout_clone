@@ -1,0 +1,277 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Block_Common5.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Block_Common7.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Block_Common6.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Ceiling.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Block_Common1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Floor.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprites/Background.png" type="Texture" id=8]
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=9]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512, 296 )
+texture = ExtResource( 8 )
+
+[node name="Floor" parent="." instance=ExtResource( 7 )]
+position = Vector2( 512, 592 )
+
+[node name="Ceiling" parent="." instance=ExtResource( 5 )]
+position = Vector2( 512, 0 )
+
+[node name="Ceiling2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1024, 504 )
+rotation = 1.5708
+
+[node name="Ceiling3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 504 )
+rotation = 1.5708
+
+[node name="Block_Common1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 528, 248 )
+
+[node name="Block_Common9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 496, 232 )
+
+[node name="Block_Common10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 592, 216 )
+
+[node name="Block_Common11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 560, 200 )
+
+[node name="Block_Common12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 528, 184 )
+
+[node name="Block_Common2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 560, 248 )
+
+[node name="Block_Common13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 528, 232 )
+
+[node name="Block_Common14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 496, 216 )
+
+[node name="Block_Common15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 592, 200 )
+
+[node name="Block_Common16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 560, 184 )
+
+[node name="Block_Common3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 496, 248 )
+
+[node name="Block_Common5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 592, 232 )
+
+[node name="Block_Common6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 560, 216 )
+
+[node name="Block_Common7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 528, 200 )
+
+[node name="Block_Common8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 496, 184 )
+
+[node name="Block_Common4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 592, 248 )
+
+[node name="Block_Common17" parent="." instance=ExtResource( 6 )]
+position = Vector2( 560, 232 )
+
+[node name="Block_Common18" parent="." instance=ExtResource( 6 )]
+position = Vector2( 528, 216 )
+
+[node name="Block_Common19" parent="." instance=ExtResource( 6 )]
+position = Vector2( 496, 200 )
+
+[node name="Block_Common20" parent="." instance=ExtResource( 6 )]
+position = Vector2( 592, 184 )
+
+[node name="Block_Common21" parent="." instance=ExtResource( 4 )]
+position = Vector2( 496, 168 )
+
+[node name="Block_Common22" parent="." instance=ExtResource( 4 )]
+position = Vector2( 464, 152 )
+
+[node name="Block_Common23" parent="." instance=ExtResource( 4 )]
+position = Vector2( 560, 136 )
+
+[node name="Block_Common24" parent="." instance=ExtResource( 4 )]
+position = Vector2( 528, 120 )
+
+[node name="Block_Common25" parent="." instance=ExtResource( 4 )]
+position = Vector2( 496, 104 )
+
+[node name="Block_Common26" parent="." instance=ExtResource( 1 )]
+position = Vector2( 528, 168 )
+
+[node name="Block_Common27" parent="." instance=ExtResource( 1 )]
+position = Vector2( 496, 152 )
+
+[node name="Block_Common28" parent="." instance=ExtResource( 1 )]
+position = Vector2( 464, 136 )
+
+[node name="Block_Common29" parent="." instance=ExtResource( 1 )]
+position = Vector2( 560, 120 )
+
+[node name="Block_Common30" parent="." instance=ExtResource( 1 )]
+position = Vector2( 528, 104 )
+
+[node name="Block_Common31" parent="." instance=ExtResource( 2 )]
+position = Vector2( 464, 168 )
+
+[node name="Block_Common32" parent="." instance=ExtResource( 2 )]
+position = Vector2( 560, 152 )
+
+[node name="Block_Common33" parent="." instance=ExtResource( 2 )]
+position = Vector2( 528, 136 )
+
+[node name="Block_Common34" parent="." instance=ExtResource( 2 )]
+position = Vector2( 496, 120 )
+
+[node name="Block_Common35" parent="." instance=ExtResource( 2 )]
+position = Vector2( 464, 104 )
+
+[node name="Block_Common65" parent="." instance=ExtResource( 2 )]
+position = Vector2( 592, 104 )
+
+[node name="Block_Common36" parent="." instance=ExtResource( 6 )]
+position = Vector2( 560, 168 )
+
+[node name="Block_Common37" parent="." instance=ExtResource( 6 )]
+position = Vector2( 528, 152 )
+
+[node name="Block_Common38" parent="." instance=ExtResource( 6 )]
+position = Vector2( 496, 136 )
+
+[node name="Block_Common39" parent="." instance=ExtResource( 6 )]
+position = Vector2( 464, 120 )
+
+[node name="Block_Common40" parent="." instance=ExtResource( 6 )]
+position = Vector2( 560, 104 )
+
+[node name="Block_Common78" parent="." instance=ExtResource( 4 )]
+position = Vector2( 368, 104 )
+
+[node name="Block_Common79" parent="." instance=ExtResource( 1 )]
+position = Vector2( 400, 104 )
+
+[node name="Block_Common80" parent="." instance=ExtResource( 6 )]
+position = Vector2( 432, 104 )
+
+[node name="Block_Common61" parent="." instance=ExtResource( 4 )]
+position = Vector2( 592, 152 )
+
+[node name="Block_Common62" parent="." instance=ExtResource( 1 )]
+position = Vector2( 592, 136 )
+
+[node name="Block_Common63" parent="." instance=ExtResource( 2 )]
+position = Vector2( 592, 168 )
+
+[node name="Block_Common64" parent="." instance=ExtResource( 6 )]
+position = Vector2( 592, 120 )
+
+[node name="Block_Common41" parent="." instance=ExtResource( 4 )]
+position = Vector2( 400, 248 )
+
+[node name="Block_Common42" parent="." instance=ExtResource( 4 )]
+position = Vector2( 368, 232 )
+
+[node name="Block_Common43" parent="." instance=ExtResource( 4 )]
+position = Vector2( 464, 216 )
+
+[node name="Block_Common44" parent="." instance=ExtResource( 4 )]
+position = Vector2( 432, 200 )
+
+[node name="Block_Common45" parent="." instance=ExtResource( 4 )]
+position = Vector2( 400, 184 )
+
+[node name="Block_Common46" parent="." instance=ExtResource( 1 )]
+position = Vector2( 432, 248 )
+
+[node name="Block_Common47" parent="." instance=ExtResource( 1 )]
+position = Vector2( 400, 232 )
+
+[node name="Block_Common48" parent="." instance=ExtResource( 1 )]
+position = Vector2( 368, 216 )
+
+[node name="Block_Common49" parent="." instance=ExtResource( 1 )]
+position = Vector2( 464, 200 )
+
+[node name="Block_Common50" parent="." instance=ExtResource( 1 )]
+position = Vector2( 432, 184 )
+
+[node name="Block_Common51" parent="." instance=ExtResource( 2 )]
+position = Vector2( 368, 248 )
+
+[node name="Block_Common52" parent="." instance=ExtResource( 2 )]
+position = Vector2( 464, 232 )
+
+[node name="Block_Common53" parent="." instance=ExtResource( 2 )]
+position = Vector2( 432, 216 )
+
+[node name="Block_Common54" parent="." instance=ExtResource( 2 )]
+position = Vector2( 400, 200 )
+
+[node name="Block_Common55" parent="." instance=ExtResource( 2 )]
+position = Vector2( 368, 184 )
+
+[node name="Block_Common56" parent="." instance=ExtResource( 6 )]
+position = Vector2( 464, 248 )
+
+[node name="Block_Common57" parent="." instance=ExtResource( 6 )]
+position = Vector2( 432, 232 )
+
+[node name="Block_Common58" parent="." instance=ExtResource( 6 )]
+position = Vector2( 400, 216 )
+
+[node name="Block_Common59" parent="." instance=ExtResource( 6 )]
+position = Vector2( 368, 200 )
+
+[node name="Block_Common66" parent="." instance=ExtResource( 4 )]
+position = Vector2( 368, 168 )
+
+[node name="Block_Common67" parent="." instance=ExtResource( 4 )]
+position = Vector2( 432, 136 )
+
+[node name="Block_Common68" parent="." instance=ExtResource( 4 )]
+position = Vector2( 400, 120 )
+
+[node name="Block_Common69" parent="." instance=ExtResource( 1 )]
+position = Vector2( 400, 168 )
+
+[node name="Block_Common70" parent="." instance=ExtResource( 1 )]
+position = Vector2( 368, 152 )
+
+[node name="Block_Common71" parent="." instance=ExtResource( 1 )]
+position = Vector2( 432, 120 )
+
+[node name="Block_Common72" parent="." instance=ExtResource( 2 )]
+position = Vector2( 432, 152 )
+
+[node name="Block_Common73" parent="." instance=ExtResource( 2 )]
+position = Vector2( 400, 136 )
+
+[node name="Block_Common74" parent="." instance=ExtResource( 2 )]
+position = Vector2( 368, 120 )
+
+[node name="Block_Common75" parent="." instance=ExtResource( 6 )]
+position = Vector2( 432, 168 )
+
+[node name="Block_Common76" parent="." instance=ExtResource( 6 )]
+position = Vector2( 400, 152 )
+
+[node name="Block_Common77" parent="." instance=ExtResource( 6 )]
+position = Vector2( 368, 136 )
+
+[node name="Block_Common60" parent="." instance=ExtResource( 6 )]
+position = Vector2( 464, 184 )
+
+[node name="Ball" parent="." instance=ExtResource( 9 )]
+position = Vector2( 480, 536 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 480, 584 )
