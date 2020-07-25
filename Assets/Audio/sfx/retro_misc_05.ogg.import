@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/retro_misc_05.ogg-5000bfe61592e6f812cd3bdf61f02937.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/sfx/retro_misc_05.ogg"
+dest_files=[ "res://.import/retro_misc_05.ogg-5000bfe61592e6f812cd3bdf61f02937.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

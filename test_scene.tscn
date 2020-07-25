@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Player/Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Blocks/Block_Common1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Level/Ceiling.tscn" type="PackedScene" id=3]
+
+
+
+
+
+
+
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 288 )
+
+[node name="Block_Common6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 440, 224 )
+
+[node name="Block_Common7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 472, 224 )
+
+[node name="Block_Common8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 504, 224 )
+
+[node name="Block_Common9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 536, 224 )
+
+[node name="Block_Common10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 408, 224 )
+
+[node name="Block_Common11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 376, 224 )
+
+[node name="Block_Common12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 344, 224 )
+
+[node name="Ceiling" parent="." instance=ExtResource( 3 )]
+position = Vector2( 384, 208 )
+
+[node name="Ceiling2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 440, 304 )

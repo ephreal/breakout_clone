@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/retro_explosion_04.ogg-9ac5591e23b158e48d6ba6c0958f6677.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/sfx/retro_explosion_04.ogg"
+dest_files=[ "res://.import/retro_explosion_04.ogg-9ac5591e23b158e48d6ba6c0958f6677.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Level/UI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Scripts/Main.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Player/Ball.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Level/Floor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Level/Ceiling.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Level/Wall.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Audio/sfx/synth_misc_12.ogg" type="AudioStream" id=8]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="UI" parent="." instance=ExtResource( 1 )]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.305882, 0.207843, 0.207843, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ball" parent="." instance=ExtResource( 3 )]
+position = Vector2( 512, 512 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 512, 584 )
+
+[node name="Floor" parent="." instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 512, 600 )
+
+[node name="Ceiling" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 512, 0 )
+
+[node name="Wall" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 0, 297.5 )
+
+[node name="Wall2" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 1024, 297.5 )
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="MessageTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="BallStartPosition" type="Position2D" parent="."]
+position = Vector2( 512, 512 )
+
+[node name="PlayerStartPosition" type="Position2D" parent="."]
+position = Vector2( 512, 584 )
+
+[node name="LifeUpPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+
+[node name="BGMPlayer" type="AudioStreamPlayer2D" parent="."]
+[connection signal="new_game" from="UI" to="." method="new_game"]
+[connection signal="hit_block" from="Ball" to="." method="update_score"]
+[connection signal="hit_floor" from="Ball" to="." method="lose_life"]
