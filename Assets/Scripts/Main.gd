@@ -11,11 +11,21 @@ var levels = [1, 2, 3, 4]
 var current_level = level_load_path % levels[current_level_index]
 var level = load(current_level)
 var level_instance = level.instance()
+var is_paused = false
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$UI/ScoreLabel.text = str(score)
+
+func _process(delta):
+	if Input.is_action_just_pressed("pause"):
+		if is_paused:
+			unpause()
+			is_paused = false
+		else:
+			pause()
+			is_paused = true
 
 
 func reset_ball():
@@ -29,10 +39,13 @@ func next_level():
 	if len(levels) == current_level_index:
 		return win()
 	reset_ball()
-	var x = 200 + (current_level_index * 50)
-	var y = -300 + (current_level_index * 50)
+	var x = 250 + (current_level_index * 50)
+	var y = -350 + (current_level_index * 50)
+	if x > $Ball.max_x:
+		x = $Ball.max_x
+	if y < $Ball.max_y:
+		y = $Ball.max_y
 	$Ball.velocity = Vector2(x, y)
-	$Player.speed += 50
 	level_instance.queue_free()
 	current_level = level_load_path % levels[current_level_index]
 	level = load(current_level)
@@ -47,6 +60,7 @@ func start_level():
 	yield($MessageTimer, "timeout")
 	$UI/Message.hide()
 	$Ball.start()
+	$Player.start()
 	
 	
 func win():
@@ -59,6 +73,7 @@ func win():
 	$UI/Title.show()
 	$UI/Message.hide()
 	$UI/StartButton.show()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 func game_over():
 	reset_ball()
@@ -70,6 +85,7 @@ func game_over():
 	$UI/Title.show()
 	$UI/Message.hide()
 	$UI/StartButton.show()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func update_score(amount):
 	score += amount
@@ -86,6 +102,7 @@ func update_score(amount):
 func new_game():
 	score = 0
 	lives = 5
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	$UI/ScoreLabel.text = str(score)
 	$UI/LivesLabel.text = str(lives)
 	$UI/StartButton.hide()
@@ -116,4 +133,18 @@ func lose_life():
 
 func reset_locations():
 	$Ball.position = $BallStartPosition.position
+	if $Ball.velocity.y > 0:
+		$Ball.velocity.y *= -1
+	$Player.position = $PlayerStartPosition.position
 	$MessageTimer.start()
+	
+
+func pause():
+	show_message("Paused")
+	$Ball.set_physics_process(false)
+	$Player.set_physics_process(false)
+	
+func unpause():
+	$UI/Message.hide()
+	$Ball.set_physics_process(true)
+	$Player.set_physics_process(true)

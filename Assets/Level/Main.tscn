@@ -64,3 +64,4 @@ stream = ExtResource( 8 )
 [connection signal="new_game" from="UI" to="." method="new_game"]
 [connection signal="hit_block" from="Ball" to="." method="update_score"]
 [connection signal="hit_floor" from="Ball" to="." method="lose_life"]
+[connection signal="ball_location" from="Player" to="Ball" method="_on_Player_collision"]
